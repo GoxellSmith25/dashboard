@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import { AuthProvider } from '@/contexts/AuthContext'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -10,39 +11,39 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Modern Dashboard',
-    template: '%s | Modern Dashboard'
+    default: 'ModernDash - Next.js Dashboard',
+    template: '%s | ModernDash'
   },
   description: 'Professional dashboard with modern design and powerful features',
   keywords: ['dashboard', 'admin', 'react', 'nextjs', 'typescript', 'tailwind'],
-  authors: [{ name: 'Dashboard Team' }],
-  creator: 'Dashboard Team',
-  publisher: 'Dashboard Team',
+  authors: [{ name: 'GoxellSmith25' }],
+  creator: 'GoxellSmith25',
+  publisher: 'ModernDash',
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://dashboard.example.com'),
+  metadataBase: new URL('https://dashboard-6qnftikw3-goxell-smith.vercel.app'),
   openGraph: {
     type: 'website',
     locale: 'tr_TR',
-    url: 'https://dashboard.example.com',
-    title: 'Modern Dashboard',
+    url: 'https://dashboard-6qnftikw3-goxell-smith.vercel.app',
+    title: 'ModernDash - Next.js Dashboard',
     description: 'Professional dashboard with modern design and powerful features',
-    siteName: 'Modern Dashboard',
+    siteName: 'ModernDash',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Modern Dashboard',
+        alt: 'ModernDash Dashboard',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Modern Dashboard',
+    title: 'ModernDash - Next.js Dashboard',
     description: 'Professional dashboard with modern design and powerful features',
     images: ['/og-image.png'],
   },
@@ -57,9 +58,6 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  verification: {
-    google: 'google-verification-code',
-  },
 }
 
 export default function RootLayout({
@@ -70,7 +68,9 @@ export default function RootLayout({
   return (
     <html lang="tr" className={inter.variable}>
       <body className={inter.className}>
-        {children}
+        <AuthProvider>
+          {children}
+        </AuthProvider>
       </body>
     </html>
   )
