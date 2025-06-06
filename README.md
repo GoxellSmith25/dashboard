@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ModernDash - Next.js 15 Dashboard
 
 🚀 **Modern, güçlü ve kullanıcı dostu dashboard uygulaması**
@@ -190,3 +191,7 @@ Bu proje [MIT](LICENSE) lisansı altında dağıtılmaktadır.
 ---
 
 **⭐ Projeyi beğendiyseniz yıldız vermeyi unutmayın!** 
+=======
+# dashboard
+Modern Next.js 15 Dashboard with TypeScript &amp; Tailwind
+>>>>>>> 43f579f63a26b68a18eb3213a926ce88d6a84a5d
