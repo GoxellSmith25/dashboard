@@ -10,7 +10,7 @@ import {
   ShieldCheckIcon,
   CurrencyDollarIcon,
   ClockIcon,
-  TrendingUpIcon,
+  ArrowTrendingUpIcon,
   EyeIcon
 } from '@heroicons/react/24/outline'
 
@@ -107,7 +107,7 @@ export default function DashboardPage() {
           { title: 'Projelerim', value: '8', icon: DocumentTextIcon, change: '+2', changeType: 'increase' as const, color: 'bg-blue-500' },
           { title: 'Tamamlanan Görevler', value: '23', icon: ChartBarIcon, change: '+4%', changeType: 'increase' as const, color: 'bg-green-500' },
           { title: 'Çalışma Saati', value: '156h', icon: ClockIcon, change: '+12h', changeType: 'increase' as const, color: 'bg-purple-500' },
-          { title: 'Performans', value: '94%', icon: TrendingUpIcon, change: '+2%', changeType: 'increase' as const, color: 'bg-indigo-500' },
+          { title: 'Performans', value: '94%', icon: ArrowTrendingUpIcon, change: '+2%', changeType: 'increase' as const, color: 'bg-indigo-500' },
         ]
     }
   }
